@@ -1,0 +1,18 @@
+<template name="afCheckboxStyled">
+  <div class='af-checkbox-boolean {{this.name}}'>
+    {{!--
+      Ensure that a unique id is generated only once per set,
+      and used for the label and input, by calling atts once.
+       - this is essential in order to have the label clickable
+       - this structure allows powerful styling with only css
+         for radio's and checkboxes.
+    --}}
+
+    {{#with atts}}
+      <input type="checkbox" value="true" {{this}} />
+      <label for="{{this.id}}" class="{{../name}}">
+        {{afFieldLabelText name=../name}}
+      </label>
+    {{/with}}
+  </div>
+</template>

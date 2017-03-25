@@ -1,0 +1,30 @@
+<template name="afBooleanRadioGroupStyled">
+  <div {{dsk}}>
+    <div>
+      {{#with falseAtts}}
+        <input type="radio" value="false" name="{{../name}}" {{this}} />
+        <label for="{{this.id}}">
+          {{#with ../atts.falseLabel}}{{this}}{{else}}False{{/with}}
+        </label>
+      {{/with}}
+    </div>
+    <div>
+      {{#with trueAtts}}
+        <input type="radio" value="true" name="{{../name}}" {{this}} />
+        <label for="{{this.id}}">
+          {{#with ../atts.trueLabel}}{{this}}{{else}}True{{/with}}
+        </label>
+      {{/with}}
+    </div>
+    {{#if this.atts.nullLabel}}
+      <div>
+        {{#with nullAtts}}
+          <input type="radio" value="null" name="{{../name}}" {{this}} />
+          <label for="{{this.id}}">
+            {{../atts.nullLabel}}
+          </label>
+        {{/with}}
+      </div>
+    {{/if}}
+  </div>
+</template>

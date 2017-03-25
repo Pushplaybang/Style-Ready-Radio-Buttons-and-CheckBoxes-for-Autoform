@@ -1,0 +1,20 @@
+<template name="afRadioGroupStyleReady">
+  <div class="af-radio-group-styled" {{dsk}}>
+  {{#each this.items}}
+    <div>
+      {{!--
+        Ensure that a unique id is generated only once per set,
+        and used for the label and input, by calling atts once.
+         - this is essential in order to have the label clickable
+         - this structure allows powerful styling with only css
+           for radio's and checkboxes.
+      --}}
+
+      {{#with atts}}
+        <input type="radio" value="{{../value}}" {{this}} />
+        <label for="{{this.id}}" class="{{../name}}-{{../value}}"> {{../label}}</label>
+      {{/with}}
+    </div>
+  {{/each}}
+  </div>
+</template>
