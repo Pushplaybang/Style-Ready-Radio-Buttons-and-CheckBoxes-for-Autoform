@@ -1,8 +1,8 @@
 Package.describe({
   name: 'pushplaybang:autoform-style-ready-radio-and-checkbox',
   summary: 'Custom radio and checkbox CSS ready templates for AutoForm',
-  version: '0.0.1',
-  git: ''
+  version: '0.0.2',
+  git: 'https://github.com/Pushplaybang/Style-Ready-Radio-Buttons-and-CheckBoxes-for-Autoform'
 });
 
 Package.onUse(function(api) {
